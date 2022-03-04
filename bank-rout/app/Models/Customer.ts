@@ -7,10 +7,10 @@ import User from './User'
 export default class Customer extends User {
   
   @column()
-  public nbCustomer:string
+  public nbcustomer:string
 
   @column()
-  public telNumber:string
+  public telnumber:string
 
   @hasMany(()=> Account)
   public accounts: HasMany<typeof Account>
@@ -18,7 +18,7 @@ export default class Customer extends User {
 
   @beforeCreate()
   public static async createCustomNbCustomer(customer:Customer){
-    customer.nbCustomer='Custom'+customer.id + Math.random().toString(36);
+    customer.nbcustomer='Custom'+customer.id + Math.random().toString(36);
     customer.password= await Hash.make(customer.password)
   }
 }

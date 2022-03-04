@@ -5,14 +5,14 @@ import Hash from '@ioc:Adonis/Core/Hash'
 export default class Admin extends User {
 
   @column()
-  public nbEmployee:string
+  public nbemployee:string
 
   @column()
-  public proTelNb:string
+  public protelNb:string
 
   @beforeCreate()
   public static async createCustomNbCustomer(admin:Admin){
-    admin.nbEmployee='FR'+admin.id + Math.random().toString(36);
+    admin.nbemployee='FR'+admin.id + Math.random().toString(36);
     admin.password= await Hash.make(admin.password)
   }
   
