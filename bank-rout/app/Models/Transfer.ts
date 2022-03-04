@@ -1,0 +1,26 @@
+import { DateTime } from 'luxon'
+import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
+import TransferType from './TransferType'
+
+export default class Transfer extends BaseModel {
+  @column({ isPrimary: true })
+  public id: number
+
+  @column.dateTime({ autoCreate: true })
+  public createdAt: DateTime
+
+  @column()
+  public numberTransfer:string
+
+  @column()
+  public amount:number
+  
+  @column()
+  public status:boolean
+
+  @hasMany(()=>TransferType)
+  public typeTransfers:HasMany<typeof TransferType>
+
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  public validatedAt: DateTime
+}
