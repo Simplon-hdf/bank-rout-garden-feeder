@@ -1,6 +1,6 @@
-import Customer from "App/Models/Customer";
+import PaginationInterface from "./paginationInterface";
 
 
 export default interface BankrootInteface {
-    getAllCustomer():Promise<Customer[]>
+    getAllCustomer(id:number):Promise<PaginationInterface>
 }
