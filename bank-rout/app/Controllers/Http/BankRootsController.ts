@@ -9,10 +9,11 @@ export default class BankRootsController {
     getAllCustomer = async ({ request, view }: HttpContextContract) => {
         let page = Number(request.input('page', 1))
         let customerForPaginate = await this.bankRootService.getAllCustomer(page)
-        return view.render('welcome', {
+        return view.render('home', {
             arrayCustomer: customerForPaginate.customerArray,
             page: customerForPaginate.page,
-            nbCustomer: customerForPaginate.nbCunstomer
+            nbCustomer: customerForPaginate.nbCunstomer,
+            nbByPage:customerForPaginate.nbByPage
         })
     }
 }
