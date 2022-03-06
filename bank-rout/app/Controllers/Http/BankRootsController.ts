@@ -1,9 +1,11 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { schema, rules } from '@ioc:Adonis/Core/Validator'
+import Customer from 'App/Models/Customer'
 import BankrootInteface from 'App/services/BankRootInterface'
 import BankRootService from 'App/services/ServiceProvider/BankRoot'
 
 export default class BankRootsController {
+
     private bankRootService: BankrootInteface = new BankRootService()
 
 
@@ -21,7 +23,8 @@ export default class BankRootsController {
     getOneCustomer= async ({view,request}:HttpContextContract)=>{
 
         let customer= await this.bankRootService.getOneCustomerById(Number(request.params().id))
-        return view.render('detailsCustomer',{customer:customer})
+        
+        return view.render('detailsCustomer',{customer:customer,gender:customer&&(customer['$extras']).genders_id})
     }
 
     getCustomerByNbCustomer= async ({request,view}:HttpContextContract)=>{
