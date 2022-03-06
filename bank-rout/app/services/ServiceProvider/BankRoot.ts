@@ -6,7 +6,7 @@ import PaginationInterface from "../paginationInterface";
 
 export default class BankRootService implements BankrootInteface {
 
-    getAllCustomer=async(page:number)=>
+    getAllCustomer=async(page:number):Promise<PaginationInterface>=>
     {
         const limit=6
         let nbCunstomer = (await Customer.all()).length
@@ -20,6 +20,10 @@ export default class BankRootService implements BankrootInteface {
        }
 
        return pagitionObject
+    }
+
+    getOneCustomerById=async (id:number):Promise<Customer | null>=>{
+        return await Customer.findBy('id',id)
     }
 
     // creatFakeCustomer=async()=>{
