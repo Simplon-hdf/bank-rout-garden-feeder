@@ -6,4 +6,6 @@ export default interface BankrootInteface {
     getAllCustomer(id:number):Promise<PaginationInterface>
 
     getOneCustomerById(id:number):Promise<Customer|null>
+
+    getOneCustomerByNbCustomer(nbCustomer:string):Promise<Customer|null>
 }

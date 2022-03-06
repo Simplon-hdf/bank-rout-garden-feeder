@@ -26,6 +26,10 @@ export default class BankRootService implements BankrootInteface {
         return await Customer.findBy('id',id)
     }
 
+    getOneCustomerByNbCustomer=async(nbCustomer:string):Promise<Customer | null>=>{
+        return await Customer.findBy('nbcustomer',nbCustomer)
+    }
+
     // creatFakeCustomer=async()=>{
        
 
