@@ -1,6 +1,7 @@
-import { beforeCreate, column } from '@ioc:Adonis/Lucid/Orm';
+import { beforeCreate, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm';
 import User from './User'
 import Hash from '@ioc:Adonis/Core/Hash'
+import Gender from './Gender';
 
 export default class Admin extends User {
 
@@ -9,6 +10,9 @@ export default class Admin extends User {
 
   @column()
   public protelNb:string
+
+  @hasMany(()=>Gender)
+  public gender:HasMany<typeof Gender>
 
   @beforeCreate()
   public static async createCustomNbCustomer(admin:Admin){
