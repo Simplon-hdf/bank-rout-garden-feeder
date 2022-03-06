@@ -16,4 +16,10 @@ export default class BankRootsController {
             nbByPage:customerForPaginate.nbByPage
         })
     }
+
+    getOneCustomer=async ({view,request}:HttpContextContract)=>{
+
+        let customer=await this.bankRootService.getOneCustomerById(Number(request.params().id))
+        return view.render('detailsCustomer',{customer:customer})
+    }
 }
