@@ -3,13 +3,15 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
 </p>
 
-You are a junior developer in the IT department of a banking brand called Bank Root.
+> You are a junior developer in the IT department of a banking brand called Bank Root.
 
-The main target of this bank was until now to offer banking services on site.
+> The main target of this bank was until now to offer banking services on site.
 
-It now wishes to diversify its clientele, enter fully into the digital era (kek …) and (FINALLY) offer its users a renewed online banking service in order to attract new users and modernize its offer.
+> It now wishes to diversify its clientele, enter fully into the digital era (kek …) and (FINALLY) offer its users a renewed online banking service in order to 
+> attract new users and modernize its offer.
 
-The mission of your team is to design an application that allows your employer to manage their bank accounts online first and then to offer banking management services to your customers (deposits, transfers, etc.) .
+> The mission of your team is to design an application that allows your employer to manage their bank accounts online first and then to offer banking management 
+> services to your customers (deposits, transfers, etc.) .
 
 ## Install
 
