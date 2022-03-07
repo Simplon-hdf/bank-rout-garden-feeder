@@ -1,6 +1,5 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { schema, rules } from '@ioc:Adonis/Core/Validator'
-import Customer from 'App/Models/Customer'
 import BankrootInteface from 'App/services/BankRootInterface'
 import BankRootService from 'App/services/ServiceProvider/BankRoot'
 
@@ -44,7 +43,8 @@ export default class BankRootsController {
                                             {
                                                 customer:customer,
                                                 successMessage:"Customer found!",
-                                                errorMessage:customer?false:"Customer unknow!"
+                                                errorMessage:customer?false:"Customer unknow!",
+                                                gender:customer&&(customer['$extras']).genders_id
                                             })
     }
 }
