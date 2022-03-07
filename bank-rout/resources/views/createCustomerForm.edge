@@ -1,0 +1,33 @@
+@layout('layouts/welcome')
+
+
+@section('body')
+    <div class="w-full h-screen flex place-content-center">
+
+        <div class="bg-gray-200 rounded-md shadow-black shadow-md  mt-12 h-3/5 item-cente w-1/3">
+            <h2 class="text-center bg-gray-500 p-3 mb-10 font-bold rounded-t-lg text-white">Subscription form</h2>
+            <form class="p-5"  action="{{route('BankRootsController.createCustomer')}}" method="POST">
+                <div class="mb-8">
+                  @!component('components/input',{placeholder:"First name",name:"firstname",width:"w-full",color:"black"})
+                 
+                </div>
+                <div class="mb-8">
+                    @!component('components/input',{placeholder:"Last name",name:"lastname",width:"w-full",color:"black"})
+                </div class="mb-3">
+                <div class="mb-6 max-w-full flex">
+                    @!component('components/selectInput',{genders,margin:"mr-3",name:"genders"})
+                    @!component('components/input',{placeholder:"Email",name:"email",width:"w-96",type:"email",color:"black"})
+                </div>
+                <div class="mb-8">
+                    @!component('components/input',{placeholder:"Telephone number",name:"telnumber",width:"w-full",color:"black",type:"tel"})
+                </div class="mb-3">
+                <div class="mb-8">
+                    @!component('components/input',{placeholder:"Pass word",name:"password",width:"w-full",color:"black",type:"password"})
+                </div class="mb-3">
+                <div class="mb-8 ">
+                    @!component('components/button')
+                </div class="mb-3">
+              </form>
+        </div>
+    </div>
+@end

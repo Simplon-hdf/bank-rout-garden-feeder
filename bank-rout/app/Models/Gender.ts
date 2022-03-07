@@ -1,4 +1,5 @@
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
+import Customer from './Customer'
 
 export default class Gender extends BaseModel {
   @column({ isPrimary: true })
@@ -6,4 +7,7 @@ export default class Gender extends BaseModel {
 
   @column()
   public nameType:string
+
+  @hasMany(()=>Customer)
+  public use:HasMany<typeof Customer>
 }
