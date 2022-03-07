@@ -10,7 +10,7 @@ export default class BankRootService implements BankrootInteface {
     {
         const limit=6
         let nbCunstomer = (await Customer.all()).length
-       let customerArrayByPage = await Database.from(Customer.table).paginate(page,limit)
+        let customerArrayByPage = await Database.from(Customer.table).paginate(page,limit)
 
        let pagitionObject:PaginationInterface = {
         customerArray:customerArrayByPage,

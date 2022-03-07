@@ -43,7 +43,8 @@ export default class BankRootsController {
                                             {
                                                 customer:customer,
                                                 successMessage:"Customer found!",
-                                                errorMessage:customer?false:"Customer unknow!"
+                                                errorMessage:customer?false:"Customer unknow!",
+                                                gender:customer&&(customer['$extras']).genders_id
                                             })
     }
 }
