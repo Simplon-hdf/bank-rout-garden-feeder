@@ -20,4 +20,6 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/customers', 'BankRootsController.getAllCustomer')
+Route.get('/', 'BankRootsController.getAllCustomer')
+Route.post('/customers','BankRootsController.getCustomerByNbCustomer')
+Route.get('/customers/:id','BankRootsController.getOneCustomer')
