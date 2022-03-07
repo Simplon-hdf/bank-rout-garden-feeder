@@ -6,7 +6,7 @@
       {{--  form search customer  --}}
     
       <form action="{{route('BankRootsController.getCustomerByNbCustomer')}}" method="POST" class="flex">
-        @!component('components/input',{placeholder:"Customer number"})
+        @!component('components/input',{placeholder:"Customer number",width:"w-64",margi:"mr-3"})
         @!component('components/button')
       </form>
     </div>

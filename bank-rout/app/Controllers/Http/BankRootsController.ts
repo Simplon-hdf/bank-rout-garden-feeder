@@ -1,5 +1,6 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { schema, rules } from '@ioc:Adonis/Core/Validator'
+import createCustomerDto from 'App/Models/DTO/createCustomerDto'
 import BankrootInteface from 'App/services/BankRootInterface'
 import BankRootService from 'App/services/ServiceProvider/BankRoot'
 
@@ -46,5 +47,17 @@ export default class BankRootsController {
                                                 errorMessage:customer?false:"Customer unknow!",
                                                 gender:customer&&(customer['$extras']).genders_id
                                             })
+    }
+
+    createCustomerForm=async({view}:HttpContextContract)=>{
+        let genderArray = await this.bankRootService.getAllGender()
+        return view.render('createCustomerForm',{genders:genderArray})
+    }
+
+    createCustomer=async({request,response}:HttpContextContract)=>{
+        let newCustomer=request.body() as createCustomerDto
+        await this.bankRootService.createCustomer(newCustomer)
+       
+       response.redirect('/')
     }
 }
