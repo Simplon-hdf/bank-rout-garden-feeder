@@ -47,4 +47,11 @@ export default class BankRootsController {
                                                 gender:customer&&(customer['$extras']).genders_id
                                             })
     }
+
+    getCustomerTransfer= async ({view}:HttpContextContract)=>{
+
+        
+        return view.render('customerTransfer')
+    }
+
 }
