@@ -49,6 +49,12 @@ export default class BankRootsController {
                                             })
     }
 
+    getCustomerTransfer= async ({view}:HttpContextContract)=>{
+
+        
+        return view.render('customerTransfer')
+    }
+
     createCustomerForm=async({view}:HttpContextContract)=>{
         let genderArray = await this.bankRootService.getAllGender()
         return view.render('createCustomerForm',{genders:genderArray})

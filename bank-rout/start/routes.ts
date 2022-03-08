@@ -23,5 +23,6 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', 'BankRootsController.getAllCustomer')
 Route.post('/customers','BankRootsController.getCustomerByNbCustomer')
 Route.get('/customers/:id','BankRootsController.getOneCustomer')
+Route.get('/customers/:id/transfer','BankRootsController.getCustomerTransfer')
 Route.get('/customers-form', 'BankRootsController.createCustomerForm')
 Route.post('/form-create','BankRootsController.createCustomer')
