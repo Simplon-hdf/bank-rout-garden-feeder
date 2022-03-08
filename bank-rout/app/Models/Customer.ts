@@ -5,7 +5,7 @@ import Account from './Account'
 import Gender from './Gender'
 import User from './User'
 
-export default class Customer extends User {
+export default class Customer extends User implements Partial<{}>{
   
   @column()
   public nbcustomer:string
@@ -16,8 +16,9 @@ export default class Customer extends User {
   @hasMany(()=> Account)
   public accounts: HasMany<typeof Account>
 
-  @hasMany(()=>Gender)
-  public gender:HasMany<typeof Gender>
+  @column()
+  public genders_id:number
+  
 
   @beforeCreate()
   public static async createCustomNbCustomer(customer:Customer){
