@@ -6,7 +6,7 @@ export default class Gender extends BaseModel {
   public id: number
 
   @column()
-  public nameType:string
+  public typename:string
 
   @hasMany(()=>Customer)
   public use:HasMany<typeof Customer>

@@ -5,6 +5,6 @@ export default class TransferType extends BaseModel {
   public id: number
 
   @column()
-  public typeName: string
+  public typename: string
 
 }
