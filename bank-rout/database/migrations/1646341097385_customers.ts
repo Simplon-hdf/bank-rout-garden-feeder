@@ -6,12 +6,12 @@ export default class Customers extends BaseSchema {
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.string('firstName')
-      table.string('lastName')
+      table.string('firstname')
+      table.string('lastname')
       table.string('email')
       table.string('password')
-      table.string('nbCusomer')
-      table.string('telNumber')
+      table.string('nbcustomer')
+      table.string('telnumber')
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })

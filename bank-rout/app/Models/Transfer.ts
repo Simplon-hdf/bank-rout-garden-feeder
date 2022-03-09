@@ -10,7 +10,7 @@ export default class Transfer extends BaseModel {
   public createdAt: DateTime
 
   @column()
-  public numberTransfer:string
+  public numbertransfer:string
 
   @column()
   public amount:number
