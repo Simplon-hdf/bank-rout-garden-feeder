@@ -14,6 +14,9 @@ export default class Account extends BaseModel {
   @column()
   public overdraf:number
 
+  @column()
+  public customer_id: number
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
