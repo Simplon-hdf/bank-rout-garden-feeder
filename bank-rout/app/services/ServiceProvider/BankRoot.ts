@@ -46,10 +46,12 @@ export default class BankRootService implements BankrootInteface {
             password: newCustomer.password,
             telnumber: newCustomer.telnumber
         })
-
-
     }
 
+    deleteCustomer = async (id: number) => {
+        const customer = await Customer.findOrFail(id)
+        return await customer.delete()
+    }
 
     // creatFakeCustomer=async()=>{
 
