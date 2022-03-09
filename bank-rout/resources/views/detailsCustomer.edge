@@ -5,17 +5,27 @@
 
     @if(customer)
         <div class="bg-white   overflow-hidden sm:rounded-lg">
-            <div class="flex items-center p-3 w-30">
-                <div class="flex-shrink-0 h-10 w-10">
-                    @if(customer.genders_id==2)
-                        <img class="ml-3 h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="">
-                    @else
-                        <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                    @end
+            <div class="flex items-center justify-between p-3 w-30">
+                <div class="flex">
+                    <div class="flex-shrink-0 h-10 w-10">
+                        @if(customer.genders_id==2)
+                            <img class="ml-3 h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="">
+                        @else
+                            <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                        @end
+                    </div>
+                    <div class="ml-9">
+                        <div class="text-sm font-medium text-gray-900">Customer profil</div>
+                        <div class="text-sm text-gray-500">Personal account details informations</div>
+                    </div>
                 </div>
-                <div class="ml-9">
-                    <div class="text-sm font-medium text-gray-900">Customer profil</div>
-                    <div class="text-sm text-gray-500">Personal account details informations</div>
+                <div class="w-30">
+                        @!component('components/button', {
+                            bg:'bg-red-500',
+                            textButton:'Delete',
+                            active:'active:bg-red-600',
+                        })
+    
                 </div>
             </div>
             <div class="border-t border-gray-200">
