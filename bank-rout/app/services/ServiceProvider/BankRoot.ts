@@ -50,6 +50,7 @@ export default class BankRootService implements BankrootInteface {
 
     }
 
+
     // creatFakeCustomer=async()=>{
 
 
