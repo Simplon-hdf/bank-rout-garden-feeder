@@ -14,4 +14,6 @@ export default interface BankrootInteface {
     getAllGender():Promise<Gender[]|null>
 
     createCustomer(newCustomer:createCustomerDto):Promise<Customer>
+
+    deleteCustomer(id:number)
 }

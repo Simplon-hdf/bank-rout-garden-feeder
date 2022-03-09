@@ -66,4 +66,10 @@ export default class BankRootsController {
        
        response.redirect('/')
     }
+
+    deleteCustomer=async({request, response}:HttpContextContract)=>{
+        let customerId = request.params().id
+        await this.bankRootService.deleteCustomer(customerId)
+        response.redirect('/')
+    }
 }
