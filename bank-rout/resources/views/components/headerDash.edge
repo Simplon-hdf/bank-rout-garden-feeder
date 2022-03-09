@@ -1,0 +1,13 @@
+<header class="bg-gray-300 shadow">
+    <div class="flex justify-around max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+     
+        <h1 class="text-3xl font-bold text-gray-900">{{name}}</h1>
+      
+      {{--  form search customer  --}}
+    
+      <form action="{{route('BankRootsController.getCustomerByNbCustomer')}}" method="POST" class="flex">
+        @!component('components/input',{placeholder:"Customer number",width:"w-64",margi:"mr-3"})
+        @!component('components/button')
+      </form>
+    </div>
+</header>
