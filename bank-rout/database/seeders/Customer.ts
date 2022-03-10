@@ -14,7 +14,7 @@ export default class CustomerSeeder extends BaseSeeder {
         telnumber: "095645668",
         password: "password",
         nbcustomer: 'Custom' + "customer.id" + Math.random().toString(36),
-        genders_id: 1,
+        genders_id: 2,
         createdAt:DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -25,7 +25,7 @@ export default class CustomerSeeder extends BaseSeeder {
         telnumber: "095645668",
         password: "password",
         nbcustomer: 'Custom' + "customer.id" + Math.random().toString(36),
-        genders_id: 2,
+        genders_id: 1,
         createdAt:DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -47,7 +47,7 @@ export default class CustomerSeeder extends BaseSeeder {
         telnumber: "095645668",
         password: "password",
         nbcustomer: 'Custom' + "customer.id" + Math.random().toString(36),
-        genders_id: 1,
+        genders_id: 2,
         createdAt:DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -58,7 +58,7 @@ export default class CustomerSeeder extends BaseSeeder {
         telnumber: "095645668",
         password: "password",
         nbcustomer: 'Custom' + "customer.id" + Math.random().toString(36),
-        genders_id: 2,
+        genders_id: 1,
         createdAt:DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -69,7 +69,7 @@ export default class CustomerSeeder extends BaseSeeder {
         telnumber: "095645668",
         password: "password",
         nbcustomer: 'Custom' + "customer.id" + Math.random().toString(36),
-        genders_id: 1,
+        genders_id: 2,
         createdAt:DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -80,7 +80,7 @@ export default class CustomerSeeder extends BaseSeeder {
         telnumber: "095645668",
         password: "password",
         nbcustomer: 'Custom' + "customer.id" + Math.random().toString(36),
-        genders_id: 2,
+        genders_id: 1,
         createdAt:DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -113,7 +113,7 @@ export default class CustomerSeeder extends BaseSeeder {
         telnumber: "095645668",
         password: "password",
         nbcustomer: 'Custom' + "customer.id" + Math.random().toString(36),
-        genders_id: 1,
+        genders_id: 2,
         createdAt:DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -124,7 +124,7 @@ export default class CustomerSeeder extends BaseSeeder {
         telnumber: "095645668",
         password: "password",
         nbcustomer: 'Custom' + "customer.id" + Math.random().toString(36),
-        genders_id: 1,
+        genders_id: 2,
         createdAt:DateTime.now(),
         updatedAt: DateTime.now()
       },
