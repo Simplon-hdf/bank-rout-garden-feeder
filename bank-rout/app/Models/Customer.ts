@@ -2,7 +2,6 @@ import Hash from '@ioc:Adonis/Core/Hash'
 import { beforeCreate, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
 
 import Account from './Account'
-import Gender from './Gender'
 import User from './User'
 
 export default class Customer extends User implements Partial<{}>{
