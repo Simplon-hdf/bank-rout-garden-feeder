@@ -13,8 +13,8 @@ export default class IndexSeeder extends BaseSeeder {
 
   public async run() {
     await this.runSeeder(await import('../Gender'))
-    await this.runSeeder(await import('../TrasferType'))
     await this.runSeeder(await import('../Customer'))
+    await this.runSeeder(await import('../TrasferType'))
     await this.runSeeder(await import('../Account'))
   }
 }
