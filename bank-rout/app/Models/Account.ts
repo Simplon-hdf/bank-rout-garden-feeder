@@ -6,7 +6,7 @@ export default class Account extends BaseModel {
   public id: number
 
   @column()
-  public accountNb:string
+  public account_nb:string
 
   @column()
   public balance:number
@@ -25,6 +25,6 @@ export default class Account extends BaseModel {
 
   @beforeCreate()
   public static accountNb(account: Account){
-    account.accountNb='FR'+account.id + Math.random().toString(36)
+    account.account_nb='FR'+account.id + Math.random().toString(36)
   }
 }
