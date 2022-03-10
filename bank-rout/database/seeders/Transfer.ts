@@ -11,7 +11,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 1,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:1
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -19,7 +20,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: true,
         transfertype_id: 2,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:1
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -27,7 +29,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 3,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:1
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -35,7 +38,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 4,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:1
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -43,7 +47,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: true,
         transfertype_id: 5,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:2
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -51,7 +56,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 1,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:2
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -59,7 +65,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 2,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:2
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -67,7 +74,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: true,
         transfertype_id: 3,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:3
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -75,7 +83,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 4,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:3
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -83,7 +92,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 5,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:3
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -91,7 +101,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: true,
         transfertype_id: 1,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:3
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -99,7 +110,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 2,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:10
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -107,7 +119,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 3,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:10
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -115,7 +128,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: true,
         transfertype_id: 4,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:10
       },
       {
         numbertransfer: 'transfer' + "transfer.id" + Math.random().toString(36),
@@ -123,7 +137,8 @@ export default class TransferSeeder extends BaseSeeder {
         status: false,
         transfertype_id: 5,
         createdAt:DateTime.now(),
-        validatedAt: DateTime.now()
+        validatedAt: DateTime.now(),
+        account_id:10
       },
     ])
   }

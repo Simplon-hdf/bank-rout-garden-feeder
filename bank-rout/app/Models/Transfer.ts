@@ -21,6 +21,9 @@ export default class Transfer extends BaseModel {
   @column()
   public transfertype_id:Number
 
+  @column()
+  public account_id:number
+
   @hasMany(()=>TransferType)
   public typeTransfers:HasMany<typeof TransferType>
 

@@ -18,7 +18,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: -300,
         overdraf: 300,
-        customer_id: 2,
+        customer_id: 1,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -26,7 +26,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: 1000,
         overdraf: 900,
-        customer_id: 3,
+        customer_id: 1,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -34,7 +34,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: 1000,
         overdraf: 300,
-        customer_id: 4,
+        customer_id: 1,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -42,7 +42,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: 2,
         overdraf: 0,
-        customer_id: 5,
+        customer_id: 2,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -50,7 +50,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: 542,
         overdraf: 150,
-        customer_id: 6,
+        customer_id: 10,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -58,7 +58,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: 56,
         overdraf: 50,
-        customer_id: 7,
+        customer_id: 10,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -66,7 +66,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: 1000000,
         overdraf: 10000,
-        customer_id: 8,
+        customer_id: 10,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -74,7 +74,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: 3678,
         overdraf: 300,
-        customer_id: 9,
+        customer_id: 3,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       },
@@ -82,7 +82,7 @@ export default class AccountSeeder extends BaseSeeder {
         account_nb: 'account' + "account.id" + Math.random().toString(36),
         balance: 503,
         overdraf: 0,
-        customer_id: 10,
+        customer_id: 3,
         createdAt: DateTime.now(),
         updatedAt: DateTime.now()
       }
