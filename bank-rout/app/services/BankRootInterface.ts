@@ -16,4 +16,6 @@ export default interface BankrootInteface {
     createCustomer(newCustomer:createCustomerDto):Promise<Customer>
 
     deleteCustomer(id:number)
+
+    // getCustomerTransfer(id:number):Promise<>
 }

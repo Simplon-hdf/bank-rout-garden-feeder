@@ -30,10 +30,9 @@ export default class BankRootsController {
     getCustomerByNbCustomer= async ({request,view}:HttpContextContract)=>{
         const postSchema = schema.create({
             numCustomer: schema.string({ trim: true }, [
-              rules.minLength(3)
+                rules.minLength(3)
             ]),
-          
-          })
+        })
 
         let payload= await request.validate({ schema: postSchema })
 
@@ -50,7 +49,7 @@ export default class BankRootsController {
     }
 
     getCustomerTransfer= async ({view}:HttpContextContract)=>{
-
+        // let customerTransfer = await this.bankRootService.getCustomerTransfer(Number(request.params().id))
         
         return view.render('customerTransfer')
     }
