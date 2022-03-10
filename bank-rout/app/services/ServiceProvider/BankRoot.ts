@@ -11,7 +11,7 @@ export default class BankRootService implements BankrootInteface {
     getAllCustomer = async (page: number): Promise<PaginationInterface> => {
         const limit = 6
         let nbCunstomer = (await Customer.all()).length
-        let customerArrayByPage = await Database.from(Customer.table).paginate(page, limit)
+        let customerArrayByPage = await Database.from(Customer.table).orderBy("id","desc").paginate(page, limit)
 
         let pagitionObject: PaginationInterface = {
             customerArray: customerArrayByPage,
