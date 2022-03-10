@@ -1,5 +1,6 @@
 import Customer from "App/Models/Customer";
 import createCustomerDto from "App/Models/DTO/createCustomerDto";
+import CustomerDto from "App/Models/DTO/customerDto";
 import Gender from "App/Models/Gender";
 import PaginationInterface from "./paginationInterface";
 
@@ -7,7 +8,7 @@ import PaginationInterface from "./paginationInterface";
 export default interface BankrootInteface {
     getAllCustomer(id:number):Promise<PaginationInterface>
 
-    getOneCustomerById(id:number):Promise<Customer|null>
+    getOneCustomerById(id:number):Promise<CustomerDto|null>
 
     getOneCustomerByNbCustomer(nbCustomer:string):Promise<Customer|null>
 

@@ -24,7 +24,8 @@ export default class BankRootsController {
 
         let customer= await this.bankRootService.getOneCustomerById(Number(request.params().id))
         
-        return view.render('detailsCustomer',{customer:customer,gender:customer&&(customer['$extras']).genders_id})
+        
+        return view.render('detailsCustomer',{customer:customer,gender:customer&&customer.genders_id,accounts:customer?.accounts})
     }
 
     getCustomerByNbCustomer= async ({request,view}:HttpContextContract)=>{
@@ -37,7 +38,7 @@ export default class BankRootsController {
         let payload= await request.validate({ schema: postSchema })
 
         let customer = await this.bankRootService.getOneCustomerByNbCustomer(payload.numCustomer)
-      
+        
        
         return view.render('detailsCustomer',
                                             {
@@ -48,11 +49,7 @@ export default class BankRootsController {
                                             })
     }
 
-    getCustomerTransfer= async ({view}:HttpContextContract)=>{
-        // let customerTransfer = await this.bankRootService.getCustomerTransfer(Number(request.params().id))
-        
-        return view.render('customerTransfer')
-    }
+    
 
     createCustomerForm=async({view}:HttpContextContract)=>{
         let genderArray = await this.bankRootService.getAllGender()
@@ -70,5 +67,9 @@ export default class BankRootsController {
         let customerId = request.params().id
         await this.bankRootService.deleteCustomer(customerId)
         response.redirect('/')
+    }
+
+    gettransfersByAccountsId=async({request}:HttpContextContract)=>{
+            console.log(request.params().id)
     }
 }
