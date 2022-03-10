@@ -16,5 +16,7 @@ export default class IndexSeeder extends BaseSeeder {
     await this.runSeeder(await import('../Customer'))
     await this.runSeeder(await import('../TrasferType'))
     await this.runSeeder(await import('../Account'))
+    await this.runSeeder(await import('../Admin'))
+    await this.runSeeder(await import('../Transfer'))
   }
 }
