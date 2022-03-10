@@ -5,7 +5,7 @@ export default class GenderSeeder extends BaseSeeder {
   public async run () {
     Gender.createMany([
       {typename:"Female"},
-      {typename:"male"},
+      {typename:"Male"},
       {typename:"no gender"},
       {typename:"transgender"}
     ])

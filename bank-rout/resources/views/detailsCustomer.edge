@@ -8,7 +8,7 @@
             <div class="flex items-center justify-between p-3 w-30">
                 <div class="flex">
                     <div class="flex-shrink-0 h-10 w-10">
-                        @if(customer.genders_id==2)
+                        @if(customer.genders_id==1)
                             <img class="ml-3 h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="">
                         @else
                             <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
@@ -57,9 +57,9 @@
                 <dt class="text-sm font-medium text-gray-500">Gender</dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                     @if(customer.genders_id==1)
-                    Male
-                    @elseif(customer.genders_id==2)
                     Female
+                    @elseif(customer.genders_id==2)
+                    Male
                     @else
                     No gender
                     @end
