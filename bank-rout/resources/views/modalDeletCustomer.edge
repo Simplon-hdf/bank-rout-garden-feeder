@@ -1,0 +1,24 @@
+@layout('layouts/welcome')
+
+
+@section('body')
+
+@component('components/modal')
+    @slot('header')
+        <h1> Delete Customer </h1>
+    @end
+
+  @slot('main')
+    <div>
+      <p>Are you sure, you want to delete the customer</p>
+    </div>
+  @end
+
+  @slot('actions')
+    <div class="flex">
+      <button>Yes, delete it</button>
+      <button>Cancel</button>
+    </div>
+  @end
+@end
+@end
