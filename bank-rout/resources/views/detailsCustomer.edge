@@ -70,39 +70,38 @@
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                     <ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
                     
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                        <div class="w-0 flex-1 flex items-center">
-                        <!-- Heroicon name: solid/paper-clip -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                        </svg>
-                        <span class="ml-2 flex-1 w-0 truncate"> Type account </span>
-                        
-                        </div>
-                        <div class="ml-4 flex-shrink-0 mr-5">
-                        <span class="font-bold">Balance: <span class="text-green-500">3000</span> $</span>
-                        </div>
-                        <div >
-                        <a class="flex hover:scale-105" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-16 w-13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        @each(account in accounts)
+                        <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                            <div class="w-0 flex-1 flex items-center">
+                            <!-- Heroicon name: solid/paper-clip -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                             </svg>
-                            <div class="bg-red-300  absolute py-1 px-3 rounded-full">
-                                <span class="text-bold">1</span>
+                            <span class="ml-2 flex-1 font-bold w-0 truncate"> {{account.account_nb}} </span>
+                            
                             </div>
-                        </a>
-                        </div>
-                        <div>
-                            <a class="flex hover:scale-105" href="/customers/:id/transfer">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-                                </svg>
-                                <div class="bg-red-300  absolute py-1 px-3 rounded-full">
-                                    <span class="text-bold">1</span>
-                                </div>    
-                            </a>
-                        </div>
-                    </li>
+                            <div class="ml-4 flex-shrink-0 mr-5">
+                            <span class="font-bold ">Balance: <span class="{{account.balance<0?'text-red-500':'text-green-500'}}">{{account.balance}}</span> $</span>
+                            </div>
+                            <div >
+                           
+                            </div>
+                            <div>
+                                <a class="flex hover:scale-105 ml-3" href="/accounts/{{account.id}}/transfers">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                    </svg>
+                                   
+                                    {{--  @if(account.transfer)
+                                        <div class="bg-red-300  absolute py-1 px-3 rounded-full">
+                                            <span class="text-bold">{{account.transfer}}</span>
+                                        </div> 
+                                    @end  --}}
+                                    
+                                </a>
+                            </div>
+                        </li>
+                        @end
                     </ul>
                 </dd>
                 </div>

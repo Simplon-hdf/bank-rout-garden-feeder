@@ -4,6 +4,11 @@ import Database from "@ioc:Adonis/Lucid/Database";
 import PaginationInterface from "../paginationInterface";
 import Gender from "App/Models/Gender";
 import createCustomerDto from "App/Models/DTO/createCustomerDto";
+import CustomerDto from "App/Models/DTO/customerDto";
+import Account from "App/Models/Account";
+import AccountDto from "App/Models/DTO/accountDto";
+import Transfer from "App/Models/Transfer";
+import TransferDto from "App/Models/DTO/transfertDto";
 
 
 export default class BankRootService implements BankrootInteface {
@@ -11,7 +16,7 @@ export default class BankRootService implements BankrootInteface {
     getAllCustomer = async (page: number): Promise<PaginationInterface> => {
         const limit = 6
         let nbCunstomer = (await Customer.all()).length
-        let customerArrayByPage = await Database.from(Customer.table).paginate(page, limit)
+        let customerArrayByPage = await Database.from(Customer.table).orderBy("id","desc").paginate(page, limit)
 
         let pagitionObject: PaginationInterface = {
             customerArray: customerArrayByPage,
@@ -23,8 +28,24 @@ export default class BankRootService implements BankrootInteface {
         return pagitionObject
     }
 
-    getOneCustomerById = async (id: number): Promise<Customer | null> => {
-        return await Customer.findBy('id', id)
+    getOneCustomerById = async (id: number): Promise<CustomerDto | null> => {
+        let result = await (Database.rawQuery('select * from customers where id = ?',[id]))
+        let customerDto=result.rows[0] as CustomerDto
+        let resultAccount = await Database.rawQuery('select * from accounts where customer_id=?',[customerDto.id])
+        customerDto.accounts = resultAccount.rows as AccountDto[]
+        
+        // customerDto.accounts.map(async(account)=>{
+          
+        //     let result=await Database.rawQuery('select * from transfers where account_id=?',[account.id])
+            
+        //     account.transfer=result.rows as TransferDto[]
+           
+        // })
+        
+        // customerDto.accounts=arrayTransferDto
+        
+        
+        return customerDto
     }
 
     getOneCustomerByNbCustomer = async (nbCustomer: string): Promise<Customer | null> => {
