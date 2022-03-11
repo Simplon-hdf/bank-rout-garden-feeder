@@ -1,0 +1,6 @@
+
+<button type="{{type?type:'submit'}}" class="{{bg?bg:'bg-emerald-500'}} {{textColor?textColor:'text-white'}} {{margin&&margin}} {{padding?padding:'p-2'}} {{width?width:"w-full"}} {{active?active:'bg-emeraude-600'}} font-bold uppercase text-xs   rounded shadow hover:shadow-md outline-none shadow-black shadow-md focus:outline-none mr-3 mb-2.5 ease-linear transition-all duration-150" 
+      >
+      {{{ await $slots.main() }}}
+  {{textButton? textButton:"Submit"}}
+</button>

@@ -1,0 +1,12 @@
+<div class="inline-block relative w-64 {{margin&&margin}}">
+    <select name="{{name}}" class="block px-2 py-2 bg-white  text-blueGray-600 relative  rounded text-sm border  shadow-black shadow-md outline-none focus:outline-none focus:ring {{width?width:'w-full'}}">
+      <option class="text-center text-slate-600">Select your gender type</option>
+        {{--  @each(gender in genders)
+            <option class="text-center" value="{{id}}">{{gender.typename}}</option>
+        @end  --}}
+        <option value="1">Female</option>
+        <option value="2">Male</option>
+        <option value="3">No gender</option>
+        <option value="4">Transgender</option>
+    </select>
+</div>
