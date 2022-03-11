@@ -76,27 +76,11 @@ export default class BankRootService implements BankrootInteface {
         return await customer.delete()
     }
 
-    // creatFakeCustomer=async()=>{
+    gettransfersByAccountsId = async(id:number): Promise<TransferDto[] | null> => {
+        let resultTransfer = await Database.rawQuery('select * from transfers where account_id=?',[id])
 
-
-    //     for(let i=1;i<=10;i++){
-    //         let object =new Customer()
-    //             object.firstname=`nom${i}`,
-    //             object.lastname= `prenom${i}`,
-    //             object.email=`email${i}@mail.com`,
-    //             object.password='testMot2pass',
-    //             object.telnumber=`5444646464`
-
-    //             Customer.create({
-    //                 firstname:object.firstname,
-    //                 lastname:object.lastname,
-    //                 email:object.email,
-    //                 password:object.password,
-    //                 telnumber:object.telnumber
-    //             })
-    //     }
-
-    // }
+        return resultTransfer.rows as TransferDto[]
+    }
 
     
 }

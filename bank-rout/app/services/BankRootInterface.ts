@@ -1,3 +1,4 @@
+import TransferDto from 'App/Models/DTO/transfertDto';
 import Customer from "App/Models/Customer";
 import createCustomerDto from "App/Models/DTO/createCustomerDto";
 import CustomerDto from "App/Models/DTO/customerDto";
@@ -17,6 +18,8 @@ export default interface BankrootInteface {
     createCustomer(newCustomer:createCustomerDto):Promise<Customer>
 
     deleteCustomer(id:number)
+
+    gettransfersByAccountsId(id:number):Promise<TransferDto[] | null>
 
     // getCustomerTransfer(id:number):Promise<>
 }

@@ -21,7 +21,6 @@ export default class BankRootsController {
     }
 
     getOneCustomer= async ({view,request}:HttpContextContract)=>{
-
         let customer= await this.bankRootService.getOneCustomerById(Number(request.params().id))
         
         
@@ -69,7 +68,10 @@ export default class BankRootsController {
         response.redirect('/')
     }
 
-    gettransfersByAccountsId=async({request}:HttpContextContract)=>{
-            console.log(request.params().id)
+    gettransfersByAccountsId=async({request, view}:HttpContextContract)=>{
+        let accountId = request.params().id
+        let transferDtoArray = await this.bankRootService.gettransfersByAccountsId(accountId)
+
+        return view.render('customerTransfer', {transferDtoArray:transferDtoArray})
     }
 }
