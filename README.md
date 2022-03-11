@@ -91,14 +91,29 @@ localhost:3333
 ```
 ------
 
-8️⃣ The project is run 🆗 ⭐, good fun 👍 .
+
+
+## Conception
+
+  * Usecase diagram: 
+  
+  ![Usecase diagram](uml/Screenshot%20from%202022-03-07%2010-29-02.png "Usecase diagram")
+
+  * Class diagram:
+  ![Class diagram](uml/bank_root_classdaigram.png "Class diagram")
+
+  * Sequence diagram:
+  ![Sequence diagram](uml/sequenceDiagram_BR.png "Sequence diagram")
+
+
+  8️⃣ The project is run 🆗 ⭐, good fun 👍 .
 
 
 ## Authors
 
-👤 **ReneRugaba** 
-👤 **Layronne** 
-👤 **MocquaisChristopher**
+👤 [ **ReneRugaba**](https://github.com/ReneRugaba)
+👤 [**MocquaisChristopher**](https://github.com/mocquaischristopher) 
+👤 [**Layronne**](https://github.com/Layronne)
 
 
 ## Show your support
